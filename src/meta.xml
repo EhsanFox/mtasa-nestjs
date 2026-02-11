@@ -24,8 +24,4 @@
     <script src="Server.lua" type="server" />
 
     <export function="httpRouter" type="server" http="true" router="true" />
-
-    <include resource="config" />
-    <include resource="utils" />
-    <include resource="database" />
 </meta>
