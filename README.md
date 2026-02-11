@@ -183,16 +183,7 @@ src/controllers/
 
 Controllers define API logic and endpoints.
 
-Example:
-
-```
-function AuthController:login(ctx)
-    return {
-        message = "Logged in successfully",
-        token = generatedToken
-    }
-end
-```
+Examples can be found inside teh controllers folder.
 
 ---
 
@@ -258,8 +249,8 @@ Throw structured HTTP errors:
 
 ```
 return Exception.BadRequest("Invalid input")
+or
 error(Exception.Unauthorized("Unauthorized"))
-error(Exception.NotFound("Resource not found"))
 ```
 
 The framework automatically handles:
@@ -306,6 +297,8 @@ start mtasa-nestjs
 - Separate concerns clearly
 - Make Lua backend development structured and enjoyable
 
+Note: in this repository, the folder is called "src" that would be placed in the "resources" folder, and for that reason the base url of your http server would be: `http(s)://<SERVER_IP>:22005/src/` So you can change that by changing the folder name (which is the name of the resource)
+
 ---
 
 ## 📈 Ideal Use Cases
@@ -325,6 +318,7 @@ start mtasa-nestjs
 - Lua (MTA runtime)
 
 No external Lua libraries required.
+All imported resources inside meta.xml files are for an examples (which they are being used inside the controllers)
 
 ---
 
