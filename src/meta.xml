@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<meta>
+    <info author="EhsanFox" version="1.0" name="API Server" description="An high-level api server framework for MTA:SA, inspired by Express.js and NestJS"/>
+    
+    <!-- Core (already implemented) -->
+    <script src="core/JWT.lua" type="server" />
+    <script src="core/Exception.lua" type="server" />
+    <script src="core/DTO.lua" type="server" />
+    <script src="core/Base.lua" type="server" />
+    <script src="core/Endpoint.lua" type="server" />
+    <script src="core/Controller.lua" type="server" />
+    <script src="core/Server.lua" type="server" />
+    <script src="core/Interceptor.lua" type="server" />
+    <script src="core/Middleware.lua" type="server" />
+    <script src="core/Guard.lua" type="server" />
+
+    <!-- App -->
+    <script src="middlewares/*.lua" type="server" />
+    <script src="guards/*.lua" type="server" />
+    <script src="interceptors/*.lua" type="server" />
+    <script src="dto/*.lua" type="server" />
+    <script src="controllers/*.lua" type="server" />
+
+    <script src="Server.lua" type="server" />
+
+    <export function="httpRouter" type="server" http="true" router="true" />
+
+    <include resource="config" />
+    <include resource="utils" />
+    <include resource="database" />
+</meta>
